@@ -5,7 +5,8 @@ struct _retire_info {
   int months;
   double contribution;
   double rate_of_return;
-}; typedef struct _retire_info retire_info;
+}; 
+typedef struct _retire_info retire_info;
 
 double calc (int startAge, double balance, retire_info info) {
   for(int i = 0; i < info.months; i++) {
@@ -16,11 +17,10 @@ double calc (int startAge, double balance, retire_info info) {
   return balance;
 }
 
-void retirement (int start, double init, retire_info working, retire_info retired) {
-  //calc(start, init, working);                                                                                         
+void retirement (int startAge, double initial, retire_info working, retire_info retired) {
     double bal;
-    bal = calc(start, init, working);
-    calc(start + working.months, bal, retired);
+    bal = calc(startAge, initial, working);
+    calc(startAge + working.months, bal, retired);
 }
 
 int main (void) {
@@ -29,7 +29,7 @@ int main (void) {
   startAge = 327;
   initial = 21345;
   
-   retire_info working;
+  retire_info working;
   working.months = 489;
   working.contribution = 1000;
   working.rate_of_return = 0.045/12;
