@@ -3,18 +3,14 @@
 
 int * arrayMax(int * array, int n) {
   int indexMax = 0;
-  int i = 0;
-  if (n <= 0 || array == NULL) {
-    return NULL;
-  }
-  else {
-  for (int j = i + 1; j < n; j++) {
-    if (array[i] < array[j]){
-      indexMax = j;
+  if (n <= 0) return NULL;
+
+  for (int i = 1; i < n; i++) {
+    if (array[i] > array[indexMax]){
+      indexMax = i;
     }
   }
-    return array+indexMax;
-  }
+    return &array[indexMax];
 }
 
 void doTest(int * array, int n) {
