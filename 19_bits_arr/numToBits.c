@@ -28,8 +28,21 @@ int getNthBit(uint32_t number, int bit) {
  *   (where the first %d is nBits, and the second %d is nNums)                                                                         
  *   then return without doing anything else.                                                                                          
  
- void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
-
+void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
+  if(nBits != nNums*32){
+    printf("Invalid call to numToBits! nBits is %d, nNums is %d\n", nBits, nNums);
+  }
+    // Dividethe number by 2.                                                                                                          
+    // Get the integer quotient for the next iteration.                                                                                
+    //Get the remainder for the binary digit.                                                                                          
+    // Repeat the steps until the quotient is equal to 0.                                                                              
+  
+  while(quotient != 0){
+    quotient = nums/2;
+    remainder = nums%2;
+    // put quotitent at last                                                                                                           
+    // put next one before                                                                                                             
+  }
 }
 
 void doTest(uint32_t * nums, int n) {
