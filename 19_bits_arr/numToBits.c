@@ -13,34 +13,29 @@ int getNthBit(uint32_t number, int bit) {
     exit (EXIT_FAILURE);
   }
   return (number & (1<<bit)) != 0;
-}
-
-/*                                                                                                                                     
- *                                                                                                                                     
- * This function takes in two arrays: nums (of length nNums), and                                                                      
- * bits (of length nBits). This function should:                                                                                       
- *                                                                                                                                     
- * - Check that there is enough space in bits to hold all the bits                                                                     
- *   of "nums".  Note that each number in "nums" will results in 32                                                                    
- *   bits in "bits".  If this is not true, your function should                                                                        
- *   print a message with the format:                                                                                                  
- *      "Invalid call to numToBits! nBits is %d, nNums is %d\n",                                                                       
- *   (where the first %d is nBits, and the second %d is nNums)                                                                         
- *   then return without doing anything else.                                                                                          
+}                                                                                     
  
 void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
   if(nBits != nNums*32){
     printf("Invalid call to numToBits! nBits is %d, nNums is %d\n", nBits, nNums);
   }
-    // Dividethe number by 2.                                                                                                          
+    // Divide the number by 2.                                                                                                          
     // Get the integer quotient for the next iteration.                                                                                
-    //Get the remainder for the binary digit.                                                                                          
+    // Get the remainder for the binary digit.                                                                                          
     // Repeat the steps until the quotient is equal to 0.                                                                              
+ 
+  uint32_t quotient = nums;
+  uint32_t remainder;
+  uint32_t ans[31]: {};
+  int i = n;
   
   while(quotient != 0){
-    quotient = nums/2;
-    remainder = nums%2;
-    // put quotitent at last                                                                                                           
+    quotient = quotient / 2;
+    remainder = quotient % 2;
+    ans[i] = remainder;
+    i--;
+    
+    // first is last                                                                                                           
     // put next one before                                                                                                             
   }
 }
