@@ -1,4 +1,4 @@
-File Edit Options Buffers Tools C Help                                                                                  
+                                                                              
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
